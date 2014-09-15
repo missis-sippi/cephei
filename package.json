@@ -1,0 +1,28 @@
+{
+  "name": "l-template",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nimaxru/l-template.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "~0.4.1",
+    "grunt-browser-sync": "^1.1.2",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-jade": "^0.12.0",
+    "grunt-contrib-stylus": "^0.18.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-css-mqpacker": "^0.1.4",
+    "grunt-csso": "^0.6.2",
+    "grunt-modernizr": "^0.5.2",
+    "grunt-spritesmith": "~1.21.0",
+    "jade-inheritance": "^0.1.0"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "~0.2.0",
+    "stylus": "^0.46.3",
+    "stylus-type-utils": "0.0.3"
+  }
+}

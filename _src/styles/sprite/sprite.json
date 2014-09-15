@@ -1,0 +1,94 @@
+{
+    "facebook": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64,
+        "source_image": "_src/sprite/facebook.png",
+        "image": "../../../images/sprite.png",
+        "total_width": 132,
+        "total_height": 132,
+        "offset_x": 0,
+        "offset_y": 0,
+        "px": {
+            "x": "0px",
+            "y": "0px",
+            "offset_x": "0px",
+            "offset_y": "0px",
+            "height": "64px",
+            "width": "64px",
+            "total_height": "132px",
+            "total_width": "132px"
+        },
+        "escaped_image": "../../../images/sprite.png"
+    },
+    "github": {
+        "x": 68,
+        "y": 0,
+        "width": 64,
+        "height": 64,
+        "source_image": "_src/sprite/github.png",
+        "image": "../../../images/sprite.png",
+        "total_width": 132,
+        "total_height": 132,
+        "offset_x": -68,
+        "offset_y": 0,
+        "px": {
+            "x": "68px",
+            "y": "0px",
+            "offset_x": "-68px",
+            "offset_y": "0px",
+            "height": "64px",
+            "width": "64px",
+            "total_height": "132px",
+            "total_width": "132px"
+        },
+        "escaped_image": "../../../images/sprite.png"
+    },
+    "twitter": {
+        "x": 0,
+        "y": 68,
+        "width": 64,
+        "height": 64,
+        "source_image": "_src/sprite/twitter.png",
+        "image": "../../../images/sprite.png",
+        "total_width": 132,
+        "total_height": 132,
+        "offset_x": 0,
+        "offset_y": -68,
+        "px": {
+            "x": "0px",
+            "y": "68px",
+            "offset_x": "0px",
+            "offset_y": "-68px",
+            "height": "64px",
+            "width": "64px",
+            "total_height": "132px",
+            "total_width": "132px"
+        },
+        "escaped_image": "../../../images/sprite.png"
+    },
+    "vk": {
+        "x": 68,
+        "y": 68,
+        "width": 64,
+        "height": 64,
+        "source_image": "_src/sprite/vk.png",
+        "image": "../../../images/sprite.png",
+        "total_width": 132,
+        "total_height": 132,
+        "offset_x": -68,
+        "offset_y": -68,
+        "px": {
+            "x": "68px",
+            "y": "68px",
+            "offset_x": "-68px",
+            "offset_y": "-68px",
+            "height": "64px",
+            "width": "64px",
+            "total_height": "132px",
+            "total_width": "132px"
+        },
+        "escaped_image": "../../../images/sprite.png"
+    }
+}
