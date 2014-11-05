@@ -177,30 +177,30 @@ a:focus {
   clear: both;
 }
 
-.s {
+[class^="icon-"] {
   display: inline-block;
   background-image: url("../images/sprite.png");
 }
 
-.s-facebook {
+.icon-facebook {
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
-.s-github {
+.icon-github {
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
-.s-twitter {
+.icon-twitter {
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
 }
 
-.s-vk {
+.icon-vk {
   background-position: -68px -68px;
   width: 64px;
   height: 64px;
@@ -216,8 +216,5 @@ header {
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-  .s {
-    background-image: url("../images/sprite@2x.png");
-    background-size: 132px;
-  }
+
 }

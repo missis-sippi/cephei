@@ -1,20 +1,20 @@
 html
-  font base-font-size/base-line-hight base-font-family
+  font $base-font-size/$base-line-hight $base-font-family
   -webkit-font-smoothing antialiased
 
 body
-  background-color body-bg-color
-  color base-text-color
+  background-color $body-bg-color
+  color $base-text-color
 
 a
-  color: base-text-color
+  color: $base-text-color
   text-decoration: none
   transition-property color, background-color
   transition-duration 250ms
   transition-timing-function ease-out
   &:hover,
   &:focus
-    color: base-text-color
+    color: $base-text-color
     text-decoration: underline
     transition-duration 0ms
   &:focus
@@ -23,5 +23,5 @@ a
     outline-offset: -2px
 
 ::selection
-  background rgba(main-color, 0.33)
+  background rgba($main-color, 0.33)
   text-shadow none
