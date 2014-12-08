@@ -184,18 +184,10 @@ a:focus {
   height: 64px;
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
 .icon-github {
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
-}
-
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
 }
 
 .icon-twitter {
@@ -204,18 +196,10 @@ a:focus {
   height: 64px;
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
 .icon-vk {
   background-position: -68px -68px;
   width: 64px;
   height: 64px;
-}
-
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
 }
 
 body {
@@ -225,4 +209,8 @@ body {
 
 header {
   display: block;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+
 }

@@ -14,7 +14,7 @@ grunt.initConfig({
       files: [{
         expand: true,
         cwd:    '_src',
-        src :   ['*.jade'],
+        src:    ['*.jade'],
         dest:   './',
         ext:    '.html'
       }]
@@ -24,8 +24,8 @@ grunt.initConfig({
   stylus: {
     build: {
       options: {
-        paths:  ['images/'],
-        urlfunc: 'image64',
+        paths:   ['images/'],
+        urlfunc:  'image64',
         compress: false
       },
       files: {
@@ -108,7 +108,7 @@ grunt.initConfig({
         prefixes:     true,
         domprefixes:  true
       },
-      tests : ['forms_placeholder', 'flexbox', 'backgroundsize', 'audio', 'video', 'svg', 'touch', 'csstransforms'],
+      tests: ['forms_placeholder', 'flexbox', 'backgroundsize', 'audio', 'video', 'svg', 'touch', 'csstransforms'],
     }
   },
 
