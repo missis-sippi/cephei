@@ -97,6 +97,7 @@ small {
 html {
   font: 16px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -106,7 +107,6 @@ body {
 
 a {
   color: #000;
-  text-decoration: none;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
   -webkit-transition-duration: 250ms;
@@ -115,17 +115,13 @@ a {
   transition-timing-function: ease-out;
 }
 
-a:hover,
-a:focus {
-  color: #000;
-  text-decoration: underline;
+a:hover {
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms;
 }
 
 a:focus {
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
@@ -188,10 +184,18 @@ a:focus {
   height: 64px;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
 .icon-github {
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+
 }
 
 .icon-twitter {
@@ -200,10 +204,18 @@ a:focus {
   height: 64px;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
 .icon-vk {
   background-position: -68px -68px;
   width: 64px;
   height: 64px;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
+
 }
 
 body {
@@ -213,8 +225,4 @@ body {
 
 header {
   display: block;
-}
-
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
 }

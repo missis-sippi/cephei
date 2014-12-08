@@ -1,22 +1,21 @@
 html
   font $base-font-size/$base-line-hight $base-font-family
-  -webkit-font-smoothing antialiased
+  font-smoothing()
 
 body
   background-color $body-bg-color
   color $base-text-color
 
 a
-  color: $base-text-color
+  color $base-text-color
   transition-property color, background-color
   transition-duration 250ms
   transition-timing-function ease-out
   &:hover
     transition-duration 0ms
   &:focus
-    outline: thin dotted
-    outline: 5px auto -webkit-focus-ring-color
-    outline-offset: -2px
+    outline thin dotted
+    outline-offset -2px
 
 ::selection
   background rgba($main-color, 0.33)

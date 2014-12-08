@@ -194,6 +194,7 @@ css-triangle($triangle-size, $triangle-color, $triangle-direction)
     border-color transparent $triangle-color transparent transparent
     border-right-style solid
 
+
 /*
  * Clearfix
  */
@@ -213,3 +214,15 @@ hide-text()
   text-indent 200%
   white-space nowrap
   overflow hidden
+
+
+/*
+ * Font rendering OS X
+ */
+font-smoothing(active = true)
+  if active == true
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+  else
+    -webkit-font-smoothing subpixel-antialiased
+    -moz-osx-font-smoothing auto
