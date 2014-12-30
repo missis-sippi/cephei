@@ -105,6 +105,14 @@ grunt.initConfig({
     }
   },
 
+  uglify: {
+    build: {
+      files: {
+        'scripts/common.min.js': '_src/vendor/**/*.js'
+      }
+    }
+  },
+
   watch: {
     options: {
       livereload: true
@@ -113,8 +121,12 @@ grunt.initConfig({
       files: ['_src/sprite/*.png'],
       tasks: ['sprite','stylus']
     },
+    js: {
+      files: ['scripts/**/*.js', '_src/vendor/**/*.js', '!scripts/common.min.js'],
+      tasks: ['uglify']
+    },
     css: {
-      files: ['_src/styles/**/*.styl'],
+      files: ['_src/**/*.styl'],
       tasks: ['stylus','autoprefixer']
     },
     html: {
@@ -178,7 +190,8 @@ grunt.registerTask('default', ['jade',
                                'csso',
                                'css_mqpacker',
                                'imagemin',
-                               'modernizr'
+                               'modernizr',
+                               'uglify'
                               ]);
 
 };
