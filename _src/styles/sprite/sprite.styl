@@ -1,7 +1,4 @@
 $sprite = json("sprite.json", { hash: true })
-$sprite2x = json("sprite@2x.json", { hash: true })
-
-$spriteSize = true
 
 [class^="icon-"]
   display inline-block
@@ -12,10 +9,3 @@ for $name, $data in $sprite
     add-property("background-position", $data.x * -1px $data.px.y * -1px)
     add-property("width", $data.px.width)
     add-property("height", $data.px.height)
-
-  @media $mq-retina
-    background-image url('../images/sprite@2x.png')
-    for $name, $data in $sprite
-      if $spriteSize
-        add-property("background-size", $data.px.total_width)
-        spriteSize = false

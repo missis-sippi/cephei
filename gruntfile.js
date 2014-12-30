@@ -66,13 +66,6 @@ grunt.initConfig({
       src:       '_src/sprite/*.png',
       destImg:   'images/sprite.png',
       destCSS:   '_src/styles/sprite/sprite.json'
-    },
-    build_retina: {
-      algorithm: 'binary-tree',
-      padding:   8,
-      src:       '_src/sprite/@2x/*.png',
-      destImg:   'images/sprite@2x.png',
-      destCSS:   '_src/styles/sprite/sprite@2x.json'
     }
   },
 

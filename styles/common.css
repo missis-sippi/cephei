@@ -210,7 +210,3 @@ body {
 header {
   display: block;
 }
-
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) {
-
-}
