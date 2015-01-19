@@ -122,7 +122,7 @@ grunt.initConfig({
       tasks: ['sprite','stylus']
     },
     js: {
-      files: ['scripts/**/*.js', '_src/vendor/**/*.js', '!scripts/common.min.js'],
+      files: ['scripts/**/*.js', '_src/vendor/**/*.js', '!scripts/common.min.js', '!scripts/main.js'],
       tasks: ['uglify']
     },
     css: {
