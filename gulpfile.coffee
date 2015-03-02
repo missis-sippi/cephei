@@ -1,5 +1,5 @@
 
-g = require 'gulp'
+gulp = require 'gulp'
 plugins = require('gulp-load-plugins')()
 
 plugins.browserSync = require 'browser-sync'
