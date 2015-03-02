@@ -4,10 +4,11 @@
         "y": 0,
         "width": 64,
         "height": 64,
-        "source_image": "_src/sprite/facebook.png",
-        "image": "../../../images/sprite.png",
+        "source_image": "/Users/ishaba/projects/gulp/_src/sprite/facebook.png",
+        "image": "sprite.png",
         "total_width": 132,
         "total_height": 132,
+        "escaped_image": "sprite.png",
         "offset_x": 0,
         "offset_y": 0,
         "px": {
@@ -19,18 +20,18 @@
             "width": "64px",
             "total_height": "132px",
             "total_width": "132px"
-        },
-        "escaped_image": "../../../images/sprite.png"
+        }
     },
     "github": {
         "x": 68,
         "y": 0,
         "width": 64,
         "height": 64,
-        "source_image": "_src/sprite/github.png",
-        "image": "../../../images/sprite.png",
+        "source_image": "/Users/ishaba/projects/gulp/_src/sprite/github.png",
+        "image": "sprite.png",
         "total_width": 132,
         "total_height": 132,
+        "escaped_image": "sprite.png",
         "offset_x": -68,
         "offset_y": 0,
         "px": {
@@ -42,18 +43,18 @@
             "width": "64px",
             "total_height": "132px",
             "total_width": "132px"
-        },
-        "escaped_image": "../../../images/sprite.png"
+        }
     },
     "twitter": {
         "x": 0,
         "y": 68,
         "width": 64,
         "height": 64,
-        "source_image": "_src/sprite/twitter.png",
-        "image": "../../../images/sprite.png",
+        "source_image": "/Users/ishaba/projects/gulp/_src/sprite/twitter.png",
+        "image": "sprite.png",
         "total_width": 132,
         "total_height": 132,
+        "escaped_image": "sprite.png",
         "offset_x": 0,
         "offset_y": -68,
         "px": {
@@ -65,18 +66,18 @@
             "width": "64px",
             "total_height": "132px",
             "total_width": "132px"
-        },
-        "escaped_image": "../../../images/sprite.png"
+        }
     },
     "vk": {
         "x": 68,
         "y": 68,
         "width": 64,
         "height": 64,
-        "source_image": "_src/sprite/vk.png",
-        "image": "../../../images/sprite.png",
+        "source_image": "/Users/ishaba/projects/gulp/_src/sprite/vk.png",
+        "image": "sprite.png",
         "total_width": 132,
         "total_height": 132,
+        "escaped_image": "sprite.png",
         "offset_x": -68,
         "offset_y": -68,
         "px": {
@@ -88,7 +89,6 @@
             "width": "64px",
             "total_height": "132px",
             "total_width": "132px"
-        },
-        "escaped_image": "../../../images/sprite.png"
+        }
     }
 }
