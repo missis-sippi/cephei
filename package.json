@@ -27,7 +27,8 @@
     "gulp-stylus": "^2.0.1",
     "gulp-uglifyjs": "^0.6.0",
     "gulp.spritesmith": "^3.2.0",
-    "imagemin-pngquant": "^4.0.0"
+    "imagemin-pngquant": "^4.0.0",
+    "stylus-type-utils": "0.0.3"
   },
   "private": true
 }
