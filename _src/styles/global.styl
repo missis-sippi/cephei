@@ -3,16 +3,16 @@ html
   font-smoothing()
 
 body
-  background-color $body-bg-color
-  color $base-text-color
+  background-color $color-base-bg
+  color $color-base
 
 a
-  color $base-text-color
+  color $color-base
   transition-property color, background-color
   transition-duration 150ms
   &:focus
     outline thin dotted
 
 ::selection
-  background rgba($main-color, 0.33)
+  background rgba($color-main, 0.33)
   text-shadow none
