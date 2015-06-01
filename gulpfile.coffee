@@ -8,7 +8,7 @@ plugins = require('gulp-load-plugins')(pattern: [
 
 gulp.task 'jade', ->
   gulp.src '_src/**/*.jade'
-  .pipe plugins.changed '', extension: '.html'
+  .pipe plugins.changed '.', extension: '.html'
   .pipe plugins.jadeInheritance basedir: '_src/'
   .pipe plugins.filter (file) ->
     !/\/_/.test(file.path) or !/^_/.test(file.relative)
