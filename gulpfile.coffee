@@ -83,5 +83,4 @@ gulp.task 'default', ['browser-sync'], ->
   gulp.watch '_src/**/*.jade',      ['jade']
   gulp.watch '_src/vendor/**/*.js', ['uglify']
   gulp.watch '_src/sprite/*',       ['sprite']
-  gulp.watch 'images/*',            ['imagemin']
   return
