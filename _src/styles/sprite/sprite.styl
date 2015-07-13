@@ -1,11 +1,13 @@
 $sprite = json("sprite.json", { hash: true })
 
-[class^="icon-"]
+$icon
   display inline-block
   background-image url('../images/sprite.png')
+  vertical-align middle
 
 for $name, $data in $sprite
   .icon-{$name}
     add-property("background-position", $data.x * -1px $data.px.y * -1px)
     add-property("width", $data.px.width)
     add-property("height", $data.px.height)
+    @extend $icon
