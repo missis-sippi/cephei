@@ -1,7 +1,7 @@
 gulp = require 'gulp'
 plugins = require('gulp-load-plugins')(pattern: [
   '*{-,.}*'
-  'csswring'
+  'cssnano'
 ])
 
 
@@ -22,11 +22,11 @@ gulp.task 'css', ->
   processors = [
     plugins.autoprefixerCore browsers: ['last 2 versions','ie 8']
     plugins.cssMqpacker
-    plugins.csswring
+    plugins.cssnano
     plugins.postcssAssets {loadPaths: ['images/','fonts/']}
   ]
   gulp.src '_src/styles/common.styl'
-  .pipe plugins.sourcemaps.init()
+  .pipe plugins.sourcemaps.init {includeContent: false}
   .pipe plugins.stylus()
   .pipe plugins.postcss processors
   .pipe plugins.rename suffix: '.min'
