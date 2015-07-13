@@ -41,14 +41,14 @@ gulp.task 'uglify', ->
   .pipe gulp.dest 'scripts'
   return
 
-#gulp.task 'modernizr', ->
-#  gulp.src 'scripts/*.js'
-#  .pipe plugins.modernizr
-#    options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
-#    tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
-#  .pipe plugins.uglify()
-#  .pipe gulp.dest 'scripts'
-#  return
+gulp.task 'modernizr', ->
+  gulp.src 'scripts/*.js'
+  .pipe plugins.modernizr
+    options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
+    tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
+  .pipe plugins.uglify()
+  .pipe gulp.dest 'scripts'
+  return
 
 gulp.task 'sprite', ->
   spriteData = gulp.src('_src/sprite/*.png')
@@ -59,6 +59,25 @@ gulp.task 'sprite', ->
     cssName: 'sprite.json'
   spriteData.img.pipe gulp.dest 'images'
   spriteData.css.pipe gulp.dest '_src/styles/sprite'
+  return
+
+config =
+  mode:
+    css:
+      dest: '../../_src/styles/svg-sprite'
+      sprite: 'sprite.css.svg'
+      bust: false
+      render:
+        styl: true
+    symbol: true
+    symbol: sprite: '../../../_src/styles/svg-sprite/sprite.symbol.svg'
+  svg:
+    xmlDeclaration: false
+    doctypeDeclaration: false
+gulp.task 'svg-sprite', ->
+  gulp.src '_src/svg/*.svg'
+  .pipe plugins.svgSprite config
+  .pipe gulp.dest 'images/svg'
   return
 
 gulp.task 'imagemin', ->
@@ -82,5 +101,6 @@ gulp.task 'default', ['browser-sync'], ->
   gulp.watch '_src/**/*.styl',      ['css']
   gulp.watch '_src/**/*.jade',      ['jade']
   gulp.watch '_src/vendor/**/*.js', ['uglify']
-  gulp.watch '_src/sprite/*',       ['sprite']
+  gulp.watch '_src/sprite/*',       ['sprite','css']
+  gulp.watch '_src/svg/*.svg',      ['svg-sprite','jade']
   return
