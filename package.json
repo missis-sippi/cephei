@@ -32,6 +32,5 @@
     "imagemin-pngquant": "^4.1.0",
     "postcss-assets": "^2.1.2",
     "stylus": "^0.51.1",
-    "stylus-type-utils": "0.0.3"
   }
 }
