@@ -21,9 +21,9 @@ gulp.task 'jade', ->
 gulp.task 'css', ->
   processors = [
     plugins.autoprefixerCore browsers: ['last 2 versions','ie 8']
+    plugins.postcssAssets {loadPaths: ['images/','fonts/']}
     plugins.cssMqpacker
     plugins.cssnano
-    plugins.postcssAssets {loadPaths: ['images/','fonts/']}
   ]
   gulp.src '_src/styles/common.styl'
   .pipe plugins.sourcemaps.init {includeContent: false}
@@ -41,14 +41,14 @@ gulp.task 'uglify', ->
   .pipe gulp.dest 'scripts'
   return
 
-gulp.task 'modernizr', ->
-  gulp.src 'scripts/*.js'
-  .pipe plugins.modernizr
-    options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
-    tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
-  .pipe plugins.uglify()
-  .pipe gulp.dest 'scripts'
-  return
+#gulp.task 'modernizr', ->
+#  gulp.src 'scripts/*.js'
+#  .pipe plugins.modernizr
+#    options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
+#    tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
+#  .pipe plugins.uglify()
+#  .pipe gulp.dest 'scripts'
+#  return
 
 gulp.task 'sprite', ->
   spriteData = gulp.src('_src/sprite/*.png')
