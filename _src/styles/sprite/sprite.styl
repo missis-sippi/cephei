@@ -5,9 +5,13 @@ $icon
   background-image url('../images/sprite.png')
   vertical-align middle
 
+// checking zero values
+checkBGP(x)
+  x is 0 ? 0 : (x * -1px)
+
 for $name, $data in $sprite
   .icon-{$name}
-    add-property("background-position", $data.x * -1px $data.px.y * -1px)
+    add-property("background-position", checkBGP($data.x) checkBGP($data.y))
     add-property("width", $data.px.width)
     add-property("height", $data.px.height)
     @extend $icon
