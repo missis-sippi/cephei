@@ -64,6 +64,7 @@ gulp.task 'sprite', ->
 config =
   mode:
     css:
+      dimensions: '-icon'
       dest: '../../_src/styles/svg-sprite'
       sprite: 'sprite.css.svg'
       bust: false
