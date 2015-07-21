@@ -83,9 +83,9 @@ gulp.task 'svg-sprite', ->
 
 gulp.task 'imagemin', ->
   gulp.src 'images/*'
+  .pipe plugins.newer 'images'
   .pipe plugins.imagemin
     progressive: true
-    svgoPlugins: [ { removeViewBox: false } ]
     use: [ plugins.imageminPngquant() ]
   .pipe gulp.dest 'images'
   return
@@ -99,9 +99,10 @@ gulp.task 'browser-sync', ->
 
 
 gulp.task 'default', ['browser-sync'], ->
-  gulp.watch '_src/**/*.styl',      ['css']
-  gulp.watch '_src/**/*.jade',      ['jade']
-  gulp.watch '_src/vendor/**/*.js', ['uglify']
-  gulp.watch '_src/sprite/*',       ['sprite','css']
-  gulp.watch '_src/svg/*.svg',      ['svg-sprite','jade']
+  gulp.watch '_src/**/*.styl',       ['css']
+  gulp.watch '_src/**/*.jade',       ['jade']
+  gulp.watch '_src/vendor/**/*.js',  ['uglify']
+  gulp.watch '_src/sprite/*',        ['sprite','css']
+  gulp.watch '_src/svg/*.svg',       ['svg-sprite','jade']
+  gulp.watch 'images/**/*.{png,jpg}',['imagemin']
   return

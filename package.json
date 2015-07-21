@@ -22,6 +22,7 @@
     "gulp-jade-inheritance": "^0.5.2",
     "gulp-load-plugins": "^1.0.0-rc",
     "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-newer": "^0.5.1",
     "gulp-postcss": "^5.1.9",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
