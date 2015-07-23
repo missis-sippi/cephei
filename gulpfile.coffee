@@ -61,23 +61,22 @@ gulp.task 'sprite', ->
   spriteData.css.pipe gulp.dest '_src/styles/sprite'
   return
 
-config =
-  mode:
-    css:
-      dimensions: '-icon'
-      dest: '../../_src/styles/svg-sprite'
-      sprite: 'sprite.css.svg'
-      bust: false
-      render:
-        styl: true
-    symbol: true
-    symbol: sprite: '../../../_src/styles/svg-sprite/sprite.symbol.svg'
-  svg:
-    xmlDeclaration: false
-    doctypeDeclaration: false
 gulp.task 'svg-sprite', ->
   gulp.src '_src/svg/*.svg'
-  .pipe plugins.svgSprite config
+  .pipe plugins.svgSprite
+    mode:
+      css:
+        dimensions: '-icon'
+        dest: '../../_src/styles/svg-sprite'
+        sprite: 'sprite.css.svg'
+        bust: false
+        render:
+          styl: true
+      symbol: true
+      symbol: sprite: '../../../_src/styles/svg-sprite/sprite.symbol.svg'
+    svg:
+      xmlDeclaration: false
+      doctypeDeclaration: false
   .pipe gulp.dest 'images/svg'
   return
 
@@ -103,6 +102,6 @@ gulp.task 'default', ['browser-sync'], ->
   gulp.watch '_src/**/*.jade',       ['jade']
   gulp.watch '_src/vendor/**/*.js',  ['uglify']
   gulp.watch '_src/sprite/*',        ['sprite','css']
-  gulp.watch '_src/svg/*.svg',       ['svg-sprite','jade']
+  gulp.watch '_src/svg/*.svg',       ['svg-sprite']
   gulp.watch 'images/**/*.{png,jpg}',['imagemin']
   return
