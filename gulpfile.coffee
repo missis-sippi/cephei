@@ -16,7 +16,6 @@ gulp.task 'jade', ->
     pretty: true
     client: false
   .pipe gulp.dest '.'
-  return
 
 gulp.task 'css', ->
   processors = [
@@ -32,23 +31,20 @@ gulp.task 'css', ->
   .pipe plugins.rename suffix: '.min'
   .pipe plugins.sourcemaps.write '.'
   .pipe gulp.dest 'styles'
-  return
 
 gulp.task 'uglify', ->
   gulp.src '_src/vendor/**/*.js'
   .pipe plugins.concat 'common.min.js'
   .pipe plugins.uglify()
   .pipe gulp.dest 'scripts'
-  return
 
-#gulp.task 'modernizr', ->
-#  gulp.src 'scripts/*.js'
-#  .pipe plugins.modernizr
-#    options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
-#    tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
-#  .pipe plugins.uglify()
-#  .pipe gulp.dest 'scripts'
-#  return
+gulp.task 'modernizr', ->
+ gulp.src 'scripts/*.js'
+ .pipe plugins.modernizr
+   options: ['setClasses','addTest','html5printshiv','testProp','fnBind']
+   tests: ['forms_placeholder','flexbox','backgroundsize','audio','video','svg','touch','csstransforms']
+ .pipe plugins.uglify()
+ .pipe gulp.dest 'scripts'
 
 gulp.task 'sprite', ->
   spriteData = gulp.src('_src/sprite/*.png')
@@ -59,7 +55,6 @@ gulp.task 'sprite', ->
     cssName: 'sprite.json'
   spriteData.img.pipe gulp.dest 'images'
   spriteData.css.pipe gulp.dest '_src/styles/sprite'
-  return
 
 gulp.task 'svg-sprite', ->
   gulp.src '_src/svg/*.svg'
@@ -78,7 +73,6 @@ gulp.task 'svg-sprite', ->
       xmlDeclaration: false
       doctypeDeclaration: false
   .pipe gulp.dest 'images/svg'
-  return
 
 gulp.task 'imagemin', ->
   gulp.src 'images/*'
@@ -87,13 +81,11 @@ gulp.task 'imagemin', ->
     progressive: true
     use: [ plugins.imageminPngquant() ]
   .pipe gulp.dest 'images'
-  return
 
 gulp.task 'browser-sync', ->
   plugins.browserSync.init ['*.html','styles/common.min.css','**/*.{png,jpg,svg}','scripts/main.js','scripts/common.min.js'],
     open: false
     server: baseDir: '.'
-  return
 
 
 
@@ -104,4 +96,3 @@ gulp.task 'default', ['browser-sync'], ->
   gulp.watch '_src/sprite/*',        ['sprite','css']
   gulp.watch '_src/svg/*.svg',       ['svg-sprite']
   gulp.watch 'images/**/*.{png,jpg}',['imagemin']
-  return
