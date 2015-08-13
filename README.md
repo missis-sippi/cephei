@@ -29,7 +29,7 @@ Thats it! Now you can browse your project via
 `http://localhost:3000`
 
 ## Contributing
-Contributions, questions and comments are all welcome and encouraged. As well as you can fork it and tune for yourself!
+Contributions, questions and comments are all welcome and encouraged. As well as you can fork it and tune up for yourself!
 
 ## License
-The MIT License, see the included LICENSE.md file.
+The MIT License, see the included `LICENSE.md` file.
