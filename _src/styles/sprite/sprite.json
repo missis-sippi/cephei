@@ -1,117 +1,47 @@
 {
-    "coffee": {
-        "x": 252,
-        "y": 0,
-        "width": 87,
-        "height": 70,
-        "source_image": "/Users/ishaba/projects/nimax2015/_src/sprite/coffee.png",
-        "image": "sprite.png",
-        "total_width": 339,
-        "total_height": 194,
-        "escaped_image": "sprite.png",
-        "offset_x": -252,
-        "offset_y": 0,
-        "px": {
-            "x": "252px",
-            "y": "0px",
-            "offset_x": "-252px",
-            "offset_y": "0px",
-            "height": "70px",
-            "width": "87px",
-            "total_height": "194px",
-            "total_width": "339px"
-        }
-    },
-    "gulp": {
-        "x": 252,
-        "y": 74,
-        "width": 45,
-        "height": 100,
-        "source_image": "/Users/ishaba/projects/nimax2015/_src/sprite/gulp.png",
-        "image": "sprite.png",
-        "total_width": 339,
-        "total_height": 194,
-        "escaped_image": "sprite.png",
-        "offset_x": -252,
-        "offset_y": -74,
-        "px": {
-            "x": "252px",
-            "y": "74px",
-            "offset_x": "-252px",
-            "offset_y": "-74px",
-            "height": "100px",
-            "width": "45px",
-            "total_height": "194px",
-            "total_width": "339px"
-        }
-    },
-    "npm": {
-        "x": 0,
-        "y": 144,
-        "width": 128,
-        "height": 50,
-        "source_image": "/Users/ishaba/projects/nimax2015/_src/sprite/npm.png",
-        "image": "sprite.png",
-        "total_width": 339,
-        "total_height": 194,
-        "escaped_image": "sprite.png",
-        "offset_x": 0,
-        "offset_y": -144,
-        "px": {
-            "x": "0px",
-            "y": "144px",
-            "offset_x": "0px",
-            "offset_y": "-144px",
-            "height": "50px",
-            "width": "128px",
-            "total_height": "194px",
-            "total_width": "339px"
-        }
-    },
-    "postcss": {
-        "x": 152,
-        "y": 0,
-        "width": 96,
-        "height": 96,
-        "source_image": "/Users/ishaba/projects/nimax2015/_src/sprite/postcss.png",
-        "image": "sprite.png",
-        "total_width": 339,
-        "total_height": 194,
-        "escaped_image": "sprite.png",
-        "offset_x": -152,
-        "offset_y": 0,
-        "px": {
-            "x": "152px",
-            "y": "0px",
-            "offset_x": "-152px",
-            "offset_y": "0px",
-            "height": "96px",
-            "width": "96px",
-            "total_height": "194px",
-            "total_width": "339px"
-        }
-    },
-    "stylus": {
-        "x": 0,
-        "y": 0,
-        "width": 148,
-        "height": 140,
-        "source_image": "/Users/ishaba/projects/nimax2015/_src/sprite/stylus.png",
-        "image": "sprite.png",
-        "total_width": 339,
-        "total_height": 194,
-        "escaped_image": "sprite.png",
-        "offset_x": 0,
-        "offset_y": 0,
-        "px": {
-            "x": "0px",
-            "y": "0px",
-            "offset_x": "0px",
-            "offset_y": "0px",
-            "height": "140px",
-            "width": "148px",
-            "total_height": "194px",
-            "total_width": "339px"
-        }
-    }
+  
+  "gulp":
+  {
+    "x": "252px",
+    "y": "0px",
+    "offset_x": "-252px",
+    "offset_y": "0px",
+    "width":"45px",
+    "height":"100px",
+    "total_width":"297px",
+    "total_height":"194px"
+  },
+  "npm":
+  {
+    "x": "0px",
+    "y": "144px",
+    "offset_x": "0px",
+    "offset_y": "-144px",
+    "width":"128px",
+    "height":"50px",
+    "total_width":"297px",
+    "total_height":"194px"
+  },
+  "postcss":
+  {
+    "x": "152px",
+    "y": "0px",
+    "offset_x": "-152px",
+    "offset_y": "0px",
+    "width":"96px",
+    "height":"96px",
+    "total_width":"297px",
+    "total_height":"194px"
+  },
+  "stylus":
+  {
+    "x": "0px",
+    "y": "0px",
+    "offset_x": "0px",
+    "offset_y": "0px",
+    "width":"148px",
+    "height":"140px",
+    "total_width":"297px",
+    "total_height":"194px"
+  }
 }

@@ -49,6 +49,7 @@ gulp.task('sprite', function() {
   spriteData = gulp.src('_src/sprite/*.png').pipe(plugins.spritesmith({
     algorithm: 'binary-tree',
     padding: 4,
+    cssTemplate: '_src/sprite/_spriteTemplate.hbs',
     imgName: 'sprite.png',
     cssName: 'sprite.json'
   }));
@@ -99,7 +100,7 @@ gulp.task('default', ['browser-sync'], function() {
   gulp.watch('_src/**/*.styl', ['css']);
   gulp.watch('_src/**/*.jade', ['jade']);
   gulp.watch('_src/vendor/**/*.js', ['uglify']);
-  gulp.watch('_src/sprite/*', ['sprite', 'css']);
+  gulp.watch('_src/sprite/*.png', ['sprite', 'css']);
   gulp.watch('_src/svg/*.svg', ['svg-sprite']);
   return gulp.watch('images/**/*.{png,jpg}', ['imagemin']);
 });

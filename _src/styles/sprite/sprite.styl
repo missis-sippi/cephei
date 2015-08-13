@@ -12,6 +12,6 @@ checkBGP(x)
 for $name, $data in $sprite
   .icon-{$name}
     add-property("background-position", checkBGP($data.x) checkBGP($data.y))
-    add-property("width", $data.px.width)
-    add-property("height", $data.px.height)
+    add-property("width", $data.width)
+    add-property("height", $data.height)
     @extend $icon

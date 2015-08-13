@@ -1,0 +1,24 @@
+{
+  // Default options
+  // https://github.com/twolfson/spritesheet-templates/blob/9.3.1/lib/templates/stylus.template.handlebars
+  // ${{strings.name}} = {{px.x}} {{px.y}} {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}} {{px.total_width}} {{px.total_height}} '{{{escaped_image}}}' '{{name}}';
+  'functions': true,
+  'variableNameTransforms': ['underscored']
+}
+
+{
+  {{#block "sprites"}}
+  {{#each sprites}}{{#if @index}},{{/if}}
+  "{{name}}":
+  {
+    "x": "{{px.x}}",
+    "y": "{{px.y}}",
+    "offset_x": "{{px.offset_x}}",
+    "offset_y": "{{px.offset_y}}",
+    "width":"{{px.width}}",
+    "height":"{{px.height}}",
+    "total_width":"{{px.total_width}}",
+    "total_height":"{{px.total_height}}"
+  }{{/each}}
+  {{/block}}
+}
