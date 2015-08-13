@@ -1,15 +1,17 @@
 {
-  "name": "l-template",
-  "version": "0.9.6",
+  "name": "Cephei",
+  "version": "1.0.1",
+  "description": "Front-end development framework",
+  "author": "Ilya Shabanov <me@ishaba.ru>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nimaxru/l-template.git"
+    "url": "git@github.com:nimaxru/cephei.git"
   },
-  "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "babel": "^5.8.21",
     "browser-sync": "^2.8.2",
-    "coffee-script": "^1.9.3",
     "css-mqpacker": "^3.1.0",
     "cssnano": "^2.2.0",
     "gulp": "^3.9.0",
