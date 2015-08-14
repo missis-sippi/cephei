@@ -1,30 +1,33 @@
 extend jade/_layout
 
 block head
-  - var pageTitle = 'Welcome'
+  - var pageTitle = 'Cephei'
 
 block body
+  
   header
-    img(src="/images/logo.png", alt="λ template")
-    h1  A master page used to produce web pages
-  footer
+    h1
+      img(src="/images/logo.png")
+      div Cephei
+  
+  p Front-end development framework aims to help you build markup and write styles faster.<br> This stuff is intended for it:
+  
+  section
     .icon-npm
     .icon-gulp
     .icon-postcss
     .icon-stylus
-    .icon-coffee
-
-  svg.svg-facebook-icon
-    use(xlink:href="#facebook")
-  svg.svg-twitter-icon
-    use(xlink:href="#twitter")
-  svg.svg-vkontakte-icon
-    use(xlink:href="#vkontakte")
-  svg.svg-youtube-icon
-    use(xlink:href="#youtube")
     
-  hr
-  
-  .icon-spinner
-    svg.svg-spinner-icon
-      use(xlink:href="#spinner")
+  footer
+    svg.svg-facebook-icon
+      use(xlink:href="#facebook")
+    svg.svg-twitter-icon
+      use(xlink:href="#twitter")
+    svg.svg-vkontakte-icon
+      use(xlink:href="#vkontakte")
+    svg.svg-youtube-icon
+      use(xlink:href="#youtube")
+    
+    .icon-spinner
+      svg.svg-spinner-icon
+        use(xlink:href="#spinner")
