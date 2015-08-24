@@ -1,6 +1,6 @@
 Cephei
 ==========
-[![devDependencies Status](https://david-dm.org/nimaxru/cephei/dev-status.svg)](david-dm.org/nimaxru/cephei#info=devDependencies)
+[![devDependencies Status](https://david-dm.org/nimaxru/cephei/dev-status.svg)](https://david-dm.org/nimaxru/cephei#info=devDependencies)
 
 Front-end development framework aims to help you build markup and write styles faster. This stuff is intended for it:
 * [Gulp](https://github.com/gulpjs/gulp)
