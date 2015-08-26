@@ -45,16 +45,19 @@ gulp.task('modernizr', function() {
 });
 
 gulp.task('sprite', function() {
-  var spriteData;
-  spriteData = gulp.src('_src/sprite/*.png').pipe(plugins.spritesmith({
-    algorithm: 'binary-tree',
+  let spritesmith = require('gulp.spritesmith');
+  let spriteData = gulp.src('_src/sprite/*.png').pipe(spritesmith({
     padding: 4,
-    cssTemplate: '_src/sprite/_spriteTemplate.hbs',
+    algorithm: 'binary-tree',
     imgName: 'sprite.png',
-    cssName: 'sprite.json'
+    cssName: 'sprite.json',
+    cssTemplate: '_src/sprite/_spriteTemplate.hbs',
   }));
-  spriteData.img.pipe(gulp.dest('images'));
-  return spriteData.css.pipe(gulp.dest('_src/styles/sprite'));
+  let imgStream = spriteData.img
+    .pipe(gulp.dest('images'));
+  let cssStream = spriteData.css
+    .pipe(gulp.dest('_src/styles/sprite'));
+  return cssStream;
 });
 
 gulp.task('svg-sprite', function() {
