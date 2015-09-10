@@ -18,19 +18,21 @@ gulp.task('jade', function() {
 });
 
 gulp.task('css', function() {
-  var processors;
-  processors = [
-    plugins.autoprefixerCore({
-      browsers: ['last 2 versions']
-    }), plugins.postcssAssets({
-      loadPaths: ['images/', 'fonts/']
-    }), plugins.cssMqpacker, plugins.cssnano
+  let autoprefixer = require('autoprefixer');
+  let processors = [
+    autoprefixer({browsers: ['last 2 versions']}),
+    plugins.postcssAssets({loadPaths: ['images/', 'fonts/']}),
+    plugins.cssMqpacker,
+    plugins.cssnano
   ];
-  return gulp.src('_src/styles/common.styl').pipe(plugins.sourcemaps.init({
-    includeContent: false
-  })).pipe(plugins.stylus()).pipe(plugins.postcss(processors)).pipe(plugins.rename({
-    suffix: '.min'
-  })).pipe(plugins.sourcemaps.write('.')).pipe(gulp.dest('styles'));
+  return gulp.src('_src/styles/common.styl')
+      .pipe(plugins.plumber())
+      .pipe(plugins.sourcemaps.init({includeContent: false}))
+      .pipe(plugins.stylus())
+      .pipe(plugins.postcss(processors))
+      .pipe(plugins.rename({suffix: '.min'}))
+      .pipe(plugins.sourcemaps.write('.'))
+      .pipe(gulp.dest('./styles'));
 });
 
 gulp.task('uglify', function() {
