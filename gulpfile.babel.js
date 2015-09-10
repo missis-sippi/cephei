@@ -5,16 +5,14 @@ let plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('jade', function() {
-  return gulp.src('_src/**/*.jade').pipe(plugins.changed('.', {
-    extension: '.html'
-  })).pipe(plugins.jadeInheritance({
-    basedir: '_src/'
-  })).pipe(plugins.filter(function(file) {
-    return !/\/_/.test(file.path) || !/^_/.test(file.relative);
-  })).pipe(plugins.jade({
-    pretty: true,
-    client: false
-  })).pipe(gulp.dest('.'));
+  return gulp.src('_src/**/*.jade')
+    .pipe(plugins.changed('./**/*', {extension: '.html'}))
+    .pipe(plugins.jadeInheritance({basedir: './_src/'}))
+    .pipe(plugins.jade({pretty: true}))
+    .pipe(plugins.filter(function (file) {
+      return !/jade/.test(file.path);
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('css', function() {
@@ -26,13 +24,13 @@ gulp.task('css', function() {
     plugins.cssnano
   ];
   return gulp.src('_src/styles/common.styl')
-      .pipe(plugins.plumber())
-      .pipe(plugins.sourcemaps.init({includeContent: false}))
-      .pipe(plugins.stylus())
-      .pipe(plugins.postcss(processors))
-      .pipe(plugins.rename({suffix: '.min'}))
-      .pipe(plugins.sourcemaps.write('.'))
-      .pipe(gulp.dest('./styles'));
+    .pipe(plugins.plumber())
+    .pipe(plugins.sourcemaps.init({includeContent: false}))
+    .pipe(plugins.stylus())
+    .pipe(plugins.postcss(processors))
+    .pipe(plugins.rename({suffix: '.min'}))
+    .pipe(plugins.sourcemaps.write('.'))
+    .pipe(gulp.dest('./styles'));
 });
 
 gulp.task('uglify', function() {
