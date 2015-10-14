@@ -1,17 +1,17 @@
 $sprite = json("sprite.json", { hash: true })
 
 $icon
-  display inline-block
-  background-image url('../images/sprite.png')
-  vertical-align middle
+	display inline-block
+	background-image url('../images/sprite.png')
+	vertical-align middle
 
 // checking zero values
 checkBGP(x)
-  x is 0 ? 0 : (x * -1px)
+	x is 0 ? 0 : (x * -1px)
 
 for $name, $data in $sprite
-  .icon-{$name}
-    add-property("background-position", checkBGP($data.x) checkBGP($data.y))
-    add-property("width", $data.width)
-    add-property("height", $data.height)
-    @extend $icon
+	.icon-{$name}
+		add-property("background-position", checkBGP($data.x) checkBGP($data.y))
+		add-property("width", $data.width)
+		add-property("height", $data.height)
+		@extend $icon
