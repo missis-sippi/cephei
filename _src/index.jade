@@ -1,33 +1,28 @@
 extend jade/_layout
 
 block head
-  - var pageTitle = 'Cephei'
+	- var pageTitle = 'Cephei'
 
 block body
-  
-  header
-    h1
-      img(src="/images/logo.png")
-      div Cephei
-  
-  p Front-end development framework aims to help you build markup and write styles faster.<br> This stuff is intended for it:
-  
-  section
-    .icon-npm
-    .icon-gulp
-    .icon-postcss
-    .icon-stylus
-    
-  footer
-    svg.svg-facebook-icon
-      use(xlink:href="#facebook")
-    svg.svg-twitter-icon
-      use(xlink:href="#twitter")
-    svg.svg-vkontakte-icon
-      use(xlink:href="#vkontakte")
-    svg.svg-youtube-icon
-      use(xlink:href="#youtube")
-    
-    .icon-spinner
-      svg.svg-spinner-icon
-        use(xlink:href="#spinner")
+
+	header
+		h1
+			img(src="/images/logo.png")
+			div Cephei
+
+	p Front-end development framework aims to help you build markup and write styles faster.<br> This stuff is intended for it:
+
+	section
+		.icon-npm
+		.icon-gulp
+		.icon-postcss
+		.icon-stylus
+
+	.icon-spinner
+		+svg('spinner')
+
+	footer
+		+svg('facebook')
+		+svg('twitter')
+		+svg('vkontakte')
+		+svg('youtube')

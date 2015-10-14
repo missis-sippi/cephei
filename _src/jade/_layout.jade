@@ -1,24 +1,28 @@
+mixin svg(name)
+	svg(class="svg-" + name + "-icon")
+		use(xlink:href="#" + name)
+
 doctype html
 html.no-js(lang="ru")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width")
-    block head
-    title #{pageTitle}
-    link(rel="stylesheet" href="styles/common.min.css")
-    link(rel="apple-touch-icon" href="images/apple-touch-icon.png")
-    meta(property="og:image" content="//.ru/images/og-image.png")
-    link(rel="image_src" href="//.ru/images/og-image.png")
-    meta(name="theme-color" content="#64d0e4")
-    script(src="scripts/modernizr.js")
-  body
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width")
+		block head
+		title #{pageTitle}
+		link(rel="stylesheet" href="styles/common.min.css")
+		link(rel="apple-touch-icon" href="images/apple-touch-icon.png")
+		meta(property="og:image" content="//.ru/images/og-image.png")
+		link(rel="image_src" href="//.ru/images/og-image.png")
+		meta(name="theme-color" content="#64d0e4")
+		script(src="scripts/modernizr.js")
+	body
 
-    div(style="display:none;visibility:hidden;")
-      include ../styles/svg-sprite/sprite.symbol.svg
+		div(style="display:none;visibility:hidden;")
+			include ../styles/svg-sprite/sprite.symbol.svg
 
-    block body
+		block body
 
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
-    script window.jQuery || document.write('<script src="scripts/jquery-1.11.2.min.js"><\/script>')
-    script(src="scripts/common.min.js")
-    script(src="scripts/main.js")
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+		script window.jQuery || document.write('<script src="scripts/jquery-1.11.2.min.js"><\/script>')
+		script(src="scripts/common.min.js")
+		script(src="scripts/main.js")
