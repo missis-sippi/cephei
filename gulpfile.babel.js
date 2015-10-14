@@ -5,14 +5,16 @@ let plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('jade', function() {
-  return gulp.src('_src/**/*.jade')
-    .pipe(plugins.changed('./**/*', {extension: '.html'}))
-    .pipe(plugins.jadeInheritance({basedir: './_src/'}))
-    .pipe(plugins.jade({pretty: true}))
-    .pipe(plugins.filter(function (file) {
-      return !/jade/.test(file.path);
-    }))
-    .pipe(gulp.dest('./'));
+  return gulp.src('_src/**/*.jade').pipe(plugins.changed('.', {
+    extension: '.html'
+  })).pipe(plugins.jadeInheritance({
+    basedir: '_src/'
+  })).pipe(plugins.filter(function(file) {
+    return !/\/_/.test(file.path) || !/^_/.test(file.relative);
+  })).pipe(plugins.jade({
+    pretty: true,
+    client: false
+  })).pipe(gulp.dest('.'));
 });
 
 gulp.task('css', function() {
