@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "babel-core": "^5.8.25",
+    "babel-core": "^6.1.4",
     "browser-sync": "^2.9.11",
     "css-mqpacker": "^4.0.0",
     "cssnano": "^3.3.1",
@@ -22,7 +22,7 @@
     "gulp-jade-inheritance": "^0.5.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-modernizr": "^1.0.0-alpha",
-    "gulp-newer": "^0.5.1",
+    "gulp-newer": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
