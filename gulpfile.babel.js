@@ -38,6 +38,7 @@ gulp.task('css', () => {
 
 gulp.task('uglify', () => {
 	return gulp.src('_src/**/*.js')
+		.pipe(plugins.plumber())
 		.pipe(plugins.concat('common.min.js'))
 		.pipe(plugins.uglify())
 		.pipe(gulp.dest('scripts'));
