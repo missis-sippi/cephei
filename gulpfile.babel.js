@@ -11,7 +11,7 @@ gulp.task('jade', () => {
     basedir: '_src/'
   })).pipe(plugins.filter(function(file) {
     return !/\/_/.test(file.path) || !/^_/.test(file.relative);
-  })).pipe(plugins.jade({
+  })).pipe(plugins.plumber()).pipe(plugins.jade({
     pretty: true,
     client: false
   })).pipe(gulp.dest('.'));
@@ -22,12 +22,13 @@ gulp.task('css', () => {
   let processors = [
     autoprefixer({browsers: ['last 2 versions']}),
     plugins.postcssAssets({loadPaths: ['images/', 'fonts/', '_src/sprite-svg/']}),
+    plugins.postcssInlineSvg({path: '_src/sprite-svg/'}),
     plugins.cssMqpacker,
     plugins.cssnano
   ];
   return gulp.src('_src/styles/common.styl')
-    .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init({includeContent: false}))
+    .pipe(plugins.plumber())
     .pipe(plugins.stylus())
     .pipe(plugins.postcss(processors))
     .pipe(plugins.rename({suffix: '.min'}))

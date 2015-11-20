@@ -35,6 +35,7 @@
     "gulp.spritesmith": "^4.3.0",
     "imagemin-pngquant": "^4.2.0",
     "postcss-assets": "^3.0.2",
+    "postcss-inline-svg": "^1.2.0",
     "stylus": "^0.52.4"
   }
 }
