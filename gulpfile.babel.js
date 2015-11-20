@@ -46,7 +46,7 @@ gulp.task('uglify', () => {
 gulp.task('modernizr', () => {
 	return gulp.src('scripts/*.js').pipe(plugins.modernizr({
 		options: ['setClasses', 'addTest', 'html5printshiv', 'testProp', 'fnBind'],
-		tests: ['forms_placeholder', 'flexbox', 'backgroundsize', 'audio', 'video', 'svg', 'touch', 'csstransforms']
+		tests: ['forms_placeholder', 'flexbox', 'backgroundsize', 'audio', 'video', 'svg', 'touchevents', 'csstransforms', 'webp']
 	})).pipe(plugins.uglify()).pipe(gulp.dest('scripts'));
 });
 
