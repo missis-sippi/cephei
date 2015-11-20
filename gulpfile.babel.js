@@ -68,24 +68,30 @@ gulp.task('sprite-png', () => {
 });
 
 gulp.task('sprite-svg', () => {
-	return gulp.src('_src/sprite-svg/*.svg').pipe(plugins.svgSprite({
-		mode: {
-			symbol: {
-				dest: './',
-				dimensions: '-icon',
-				sprite: 'images/sprite.svg',
-				render: {
-					styl: {
-						dest: '_src/styles/sprite-svg/sprite-svg.styl'
+	gulp.src('_src/sprite-svg/*.svg')
+		.pipe(plugins.plumber())
+		.pipe(plugins.svgSprite({
+			mode: {
+				symbol: {
+					dest: './',
+					dimensions: '-icon',
+					sprite: 'images/sprite.svg',
+					example: {
+						dest: '_sprite-svg.html'
+					},
+					render: {
+						styl: {
+							dest: '_src/styles/sprite-svg/sprite-svg.styl'
+						}
 					}
 				}
+			},
+			svg: {
+				xmlDeclaration: false,
+				doctypeDeclaration: false
 			}
-		},
-		svg: {
-			xmlDeclaration: false,
-			doctypeDeclaration: false
-		}
-	})).pipe(gulp.dest('./'));
+		}))
+		.pipe(gulp.dest('./'));
 });
 
 gulp.task('imagemin', () => {
