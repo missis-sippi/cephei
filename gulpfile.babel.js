@@ -37,7 +37,10 @@ gulp.task('css', () => {
 });
 
 gulp.task('uglify', () => {
-  return gulp.src('_src/vendor/**/*.js').pipe(plugins.concat('common.min.js')).pipe(plugins.uglify()).pipe(gulp.dest('scripts'));
+	return gulp.src('_src/**/*.js')
+		.pipe(plugins.concat('common.min.js'))
+		.pipe(plugins.uglify())
+		.pipe(gulp.dest('scripts'));
 });
 
 gulp.task('modernizr', () => {
